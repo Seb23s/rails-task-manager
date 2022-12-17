@@ -1,0 +1,17 @@
+<h1>Edit this task</h1>
+
+<%= link_to "List all the tasks", tasks_path %>
+
+<!-- Cours : Generate the form with form_with  / app/views/restaurants/edit.html.erb -->
+<%= form_with model: @task do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :Title %>
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+  <%= f.submit %>
+  <div class="checkbox">
+    <label><%= f.check_box :completed %> Completed !</label>
+  </div>
+<% end %>
+
+<%= link_to "List all the tasks", tasks_path %>
